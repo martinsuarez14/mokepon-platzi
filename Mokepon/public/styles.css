@@ -1,0 +1,184 @@
+
+/* ORDENAR EL CSS COMO ESTÁ EN HTML*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    font-family: 'Fredoka One', cursive;
+    background-image: url(bosque1.png);
+    background-size: cover;
+}
+
+.titulo {
+    color: hotpink;
+    font-size: 35px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: hotpink;
+    font-size: 20px;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+width = ANCHO
+height = LARGO
+background = FONDO
+*/
+/*
+DISPLAY BLOCK se ajusta a toda la pantalla
+DISPLAY INLINE lo tienen algunas etiquetas como "label" no le afectan el width y height
+DISPLAY INLINE-BLOCK lo tienen los "inputs" y "button". Tiene ambas propiedades y se le puede agregar width y height
+*/
+/*
+FLEXBOX tiene propiedades para contenedores y para sus hijos
+/*
+
+label {
+    background-color: tomato;
+    width: 310px;
+    height: 50px;
+}
+
+input {
+    background-color: aqua;
+    width: 310px;
+    height: 50px;
+}
+
+button {
+    background-color: blueviolet;
+    width: 310px;
+    height: 50px;
+}
+*/
+
+
+.tarjeta-de-mokepon {
+    width: 180px;
+    height: 100px;
+    background: rgb(189, 138, 80);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    color: red;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+/* uso la clase ".tarjeta-de-mokepon img" para alterar la imagen solamente*/
+.tarjeta-de-mokepon img {
+    width: 85px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: rgb(221, 212, 134);
+}
+
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    margin: 20px;
+}
+
+.tarjetas, .tarjetas-ataques {
+    display: flex;
+    /* display: flex; acomoda los elementos en su interior uno al lado del otro */
+    gap: 10px;
+    /* gap: 10px; da un espaciado entre elementos dentro del display: flex*/
+
+
+
+}
+
+#subtitulo-ataque{
+    color: hotpink;
+    font-size: 20px;
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: darkorange;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: transparent;
+    width: 100px;
+    color: white;
+}
+#mensajes {
+    width: 280px;
+    background: pink;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#boton-reiniciar {
+    border: none;
+    color: violet;
+
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    text-align: center;
+}
+
+#verMapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#verMapa button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    margin: 5px 0;
+}
+
+
+@media (max-width: 560px) {
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 300px) {
+    #verMapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
